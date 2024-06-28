@@ -12,7 +12,7 @@ $users = $controller->listUsers();
 
 if ($_SERVER["REQUEST_METHOD"] == "GET" && isset($_GET['delete_id'])) {
     $controller->deleteUser($_GET['delete_id']);
-    header("Location: users.php.php");
+    header("Location: users.php");
     exit;
 }
 
@@ -27,7 +27,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 
     // Redirecionar para a mesma página para ver as alterações
-    header("Location: users.php.php");
+    header("Location: users.php");
     exit;
 }
 ?>
@@ -84,7 +84,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                     </button>
                 </div>
                 <div class="modal-body">
-                    <form id="editForm" action="users.php.php" method="post">
+                    <form id="editForm" action="users.php" method="post">
                         <input type="hidden" name="id" id="edit-id">
                         <div class="form-group">
                             <label for="edit-nome">Nome</label>
@@ -120,7 +120,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         function confirmDelete(id) {
             if (confirm("Você tem certeza que deseja deletar este usuário?")) {
-                window.location.href = "users.php.php?delete_id=" + id;
+                window.location.href = "users.php?delete_id=" + id;
             }
         }
     </script>
