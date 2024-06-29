@@ -18,7 +18,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"){
      // Chama o método para criar usuário no HomeController
      $controller->createUser($username, $email);
 
-     header("Location: deleteUser.php");
+     header("Location: users.php");
      exit;
  
 
@@ -28,6 +28,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"){
 
 <head>
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+<title>Criar Usuários</title>
 </head>
 <html>
     <H1>Create User</H1>

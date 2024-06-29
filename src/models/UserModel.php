@@ -1,4 +1,6 @@
 <?php 
+
+
 class UserModel{
    public function getAllUsers(){
     require_once '../database/db_config.php';
